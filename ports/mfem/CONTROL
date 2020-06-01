@@ -1,0 +1,5 @@
+Source: mfem
+Version: 4.1+
+Description: Library for finite element methods
+Homepage: https://mfem.org
+Build-Depends: metis, hypre
