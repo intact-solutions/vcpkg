@@ -1,14 +1,10 @@
 include(vcpkg_common_functions)
 
-vcpkg_download_distfile(ARCHIVE
-    URLS "http://computation.llnl.gov/projects/hypre-scalable-linear-solvers-multigrid-methods/download/hypre-2.11.2.tar.gz"
-    FILENAME "hypre-2.11.2.tar.gz"
-    SHA512 a06321028121e5420fa944ce4fae5f9b96e6021ec2802e68ec3c349f19a20543ed7eff774a4735666c5807ce124eb571b3f86757c67e91faa1c683c3f657469f
-)
-
-vcpkg_extract_source_archive_ex(
-    ARCHIVE ${ARCHIVE}
+vcpkg_from_github(
     OUT_SOURCE_PATH SOURCE_PATH
+    REPO hypre-space/hypre
+    REF v2.11.2
+    SHA512 bff1ccae79294ebfee3611107df2aede9837838a71d607d6e8aab91658f83fee5d8d6a306facc54e9d0e3591dd634dc3742e52104bdbb23ae98475f3c5191ad3
     PATCHES
         fix-root-cmakelists.patch
         fix-macro-to-template.patch
