@@ -40,7 +40,7 @@ if(EXISTS "${SYSTEM_MPIEXEC_FILEPATH}")
         if(NOT CMAKE_MATCH_1 STREQUAL MSMPI_VERSION)
             download_msmpi_redistributable_package()
 
-            message(FATAL_ERROR
+            message(WARNING
                 "  The version of the installed MSMPI redistributable packages does not match the version to be installed\n"
                 "    Expected version: ${MSMPI_VERSION}\n"
                 "    Found version: ${CMAKE_MATCH_1}\n"
